@@ -1,0 +1,19 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+ENTITY ARShift IS
+PORT(a : IN BIT_VECTOR(3 DOWNTO 0); 
+z : OUT BIT_VECTOR(3 DOWNTO 0));
+
+END ENTITY;
+
+ARCHITECTURE BEHAVIORAL OF ARShift IS
+
+SIGNAL tmp : BIT_VECTOR(3 DOWNTO 0);
+
+BEGIN
+	tmp(2 DOWNTO 0) <= a(3 DOWNTO 1);
+	tmp(3) <= a(3);
+	z <= tmp;
+
+END BEHAVIORAL;
