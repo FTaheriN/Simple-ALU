@@ -13,5 +13,5 @@ This simple ALU is implemented in VHDL and works as below:
   
   
   
-
+Also there is a test file included to test the ALU.
   
